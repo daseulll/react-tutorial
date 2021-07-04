@@ -6,8 +6,18 @@ import ReactDom from "react-dom";
 // 정식명칭 : stateless functional component
 // always return JSX
 function Greeting() {
-  return <h4>this is daseul and this is my first component</h4>;
+  return (
+    <div>
+      <Person />
+      <Message />
+    </div>
+  );
 }
+
+const Person = () => <h2>daseul</h2>;
+const Message = () => {
+  return <p>this is my message</p>;
+};
 
 // JSX를 실제로 render하기 위해서는, 아래와 같이 ReactDom.render함수에
 // ReactDom.render({무엇을 랜더할 것인지}, {어디에 랜더할 것인지}) 두가지 인자를 넘겨주어야 한다.
