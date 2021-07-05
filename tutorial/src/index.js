@@ -1,13 +1,22 @@
 import React from "react";
 import ReactDom from "react-dom";
 
+//CSS
+import "./index.css";
 // function name을 대문자로 시작해야 component라는 것을 인식한다
 // Component를 작성하기 위해서는 먼저, React를 import 해야한다.(from 'react')
 // 정식명칭 : stateless functional component
 // always return JSX
 function BookList() {
   return (
-    <section>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   );
@@ -15,7 +24,7 @@ function BookList() {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image></Image>
       <Title />
       <Author />
